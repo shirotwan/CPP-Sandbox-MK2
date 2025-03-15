@@ -1,0 +1,48 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: g++.exe build active file",
+			"command": "C:/msys64/ucrt64/bin/g++.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-O3",
+				"-march=native",
+				"-ffast-math",
+				"-fopenmp",
+				"${file}",
+				"C:\\CodeConfig\\CPP\\Extras\\glad.c",
+				"-I",
+				"%CPP_INC%",
+				"-I",
+				"${fileDirname}\\..\\inc",
+				"-L",
+				"%CPP_LIB%\\glfw",
+				"-L",
+				"%CPP_LIB%\\sfml",
+				"-L",
+				"${fileDirname}\\..\\lib",
+				"-o",
+				"${fileDirname}\\..\\release\\${fileBasenameNoExtension}.exe",
+				"-lglfw3dll",
+				"-lsfml-graphics",
+				"-lsfml-window",
+				"-lsfml-system",
+				"-lsfml-network",
+				"-lsfml-audio"
+			],
+			"options": {
+				"cwd": "C:/msys64/ucrt64/bin"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: C:/msys64/ucrt64/bin/g++.exe"
+		}
+	]
+}
